@@ -162,3 +162,10 @@
 		   </div>
 	  </div>
 </div>
+
+<script >
+	$(document).ready(function () {
+		$(".active").removeClass();
+		$("#idHome").addClass("active");
+	});
+</script>

@@ -12,7 +12,7 @@ $cakeDescription = 'Inicio | Aquaservicios';
     </title>
  
   
-    <?= $this->html->script('jquery.lightbox.js') ?>
+   
     <?= $this->Html->css('touchTouch.css') ?>
     <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -40,11 +40,11 @@ $cakeDescription = 'Inicio | Aquaservicios';
          <div class="top-menu">  
              <span class="menu"></span>
              <ul>
-                <li><a class="active" href="/Index/">Inicio</a></li>
-                <li><a href="/About/">Nosotros</a></li>
+                <li><a id="idHome" href="/Index/">Inicio</a></li>
+                <li><a id="idAbout" href="/About/">Nosotros</a></li>
                 <!--<li><a href="project.html">Proyectos</a></li>-->                 
-                <li><a href="/Services/">Servicios</a></li>
-                <li><a href="/Contacts/">Contacto</a></li>
+                <li><a id="idServices" href="/Services/">Servicios</a></li>
+                <li><a id="idContacts" href="/Contacts/">Contacto</a></li>
              </ul> 
           </div>
           <!-- script-for-menu -->

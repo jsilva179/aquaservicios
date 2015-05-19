@@ -25,6 +25,21 @@ class ServicesController extends AppController
      */
    public function index (){
 
-
    }
+ 	public function ambient (){
+   }
+  public function peripherals (){
+   }
+  public function collection (){
+   }
+  public function wastes (){
+   }
+  public function waterTreatment (){
+   }
+
+  public function specialties (){
+   }
+
+
+
 }

@@ -114,3 +114,9 @@
 		   </div>
 	  </div>
 </div>
+<script >
+	$(document).ready(function () {
+		$(".active").removeClass();
+		$("#idAbout").addClass("active");
+	});
+</script>
