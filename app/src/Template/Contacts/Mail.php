@@ -1,36 +1,13 @@
 <?php
 
-namespace App\Controller;
-
-use Cake\Core\Configure;
-use Cake\Network\Exception\NotFoundException;
-use Cake\View\Exception\MissingTemplateException;
-
-/**
- * Static content controller
- *
- * This controller will render views from Template/Pages/
- *
- * @link http://book.cakephp.org/3.0/en/controllers/pages-controller.html
- */
-class ContactsController extends AppController
-{
-
-    /**
-     * Displays a view
-     *
-     * @return void|\Cake\Network\Response
-     * @throws \Cake\Network\Exception\NotFoundException When the view file could not
-     *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
-     */
-   public function index ()
-   {}
-
-   public function Mail(){
+	//$destinatario = "alejandro.zamora@rescate-it.net";
+	//$destinatario = "contacto@inovatech.com.mx";
+	$destinatario = "jalejandrozamora@gmail.com";
+	$asunto = "Solicitud de Información en WEB";
 	
-	if(isset($this->request->data['name'])) {
+	if(isset($_POST['submit'])) {
 		
-	$destinatario = $this->request->query['name'];
+	$destinatario = "jorgesilva@prollux.com";
 	$asunto = "Solicitud de Información en WEB";
 	
 	$cuerpo = "
@@ -48,19 +25,19 @@ class ContactsController extends AppController
 							</tr>
 							<tr>
 								<td>Nombre: </td>
-								<td>" . $this->request->data['name'] . "</td>
+								<td>" . $_POST['nombre'] . "</td>
 							</tr>
 							<tr>
 								<td>Email: </td>
-								<td>" . $this->request->data['mail']. "</td>
+								<td>" . $_POST['email'] . "</td>
 							</tr>
 							<tr>
 								<td>Telefono: </td>
-								<td>" . $this->request->data['phone'] . "</td>
+								<td>" . $_POST['telefono'] . "</td>
 							</tr>
 							<tr>
 								<td>Mensaje: </td>
-								<td>" . $this->request-data['message'] . "</td>
+								<td>" . $_POST['mensaje'] . "</td>
 							</tr>
 						</table>			
 					</div>
@@ -82,9 +59,5 @@ class ContactsController extends AppController
 	$headers .= "From: Contacto Web<jorgesilva@prollux.com>\r\n";
 	mail($destinatario,$asunto,$cuerpo,$headers);
 	header('Location: http://www.prollux.com/' );
-	echo json_encode("ok");
 
-   }
-
- 
-}
+?> 
